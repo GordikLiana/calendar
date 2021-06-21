@@ -1,0 +1,66 @@
+.calendar {
+    border-radius: 2%;
+    width: 320px;
+    background: url(/img/alpaka.jpg) center center/cover no-repeat;
+    &__wrapper {
+        padding: 14px 14px;
+        border-radius: 2%;
+        width: 100%;
+        background: rgba(19, 20, 23, 0.9);
+    }
+    &__top {
+        padding-bottom: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__arrow {
+        cursor: pointer;
+        display: block;
+        object-fit: cover;
+    }
+    &__arrow--right{
+        transform: rotateY(180deg);
+    }
+    &__arrows {
+        border: none;
+        background-color: inherit;
+    }
+    &__month {
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff;
+    }
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 10px;
+    }
+    &__number{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        line-height: 36px;
+        color: #fff;
+        z-index: 4;
+        &:hover {
+            width: 33px;
+            height: 33px;
+            background: #2D9CDB;
+            border-radius: 18px;
+            &:before{
+                position: absolute;
+                z-index: 1;
+                border-radius: 18px;
+                content: '';
+                width: 28px;
+                height: 28px;
+                background: rgba(19, 20, 23, 0.3);
+                border: 1px solid rgba(19, 20, 23, 0.1);
+            }
+        }
+    }
+}
